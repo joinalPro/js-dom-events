@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Dom EVENTS</title>
+    <title>JS DOM Events</title>
 </head>
 <body>
-    <h1>Dom Special Events</h1>
-    <button onclick="console.log(3)">Click Me</button>
-    <button onclick="console.log(66)">Another Button</button>
+    <h1 onclick="console.log('I am onclick')">Learning DOM Events.</h1>
+    <button title="Thisis a tooltip" onclick="console.log(7)">Click Me</button>
+    <button onclick="console.log(65)">Another button</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor = 'Yellow'">Make Yellow</button>
+    
+    <button onclick="makeRed()">Make Red</button>
+<!-- option 3-->
+    <button id="make-blue">Make Blue</button>
+<!-- option 4-->
+    <button id="make-purple">Make Purple</button>
+
+    <!--Option 4-->
+    <button id="make-pink">Make Pink</button>
+
+    <script src="js/events.js"></script>
+    <script>
+        const pinkButton = document.getElementById('make-pink');
+        pinkButton.addEventListener('click', makePink )
+
+        function makePink(){
+            document.body.style.backgroundColor = 'pink';
+        }
+    </script>
 </body>
-<script src="js/events.js"></script>
 </html>
